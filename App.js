@@ -1,11 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import JobCard from './src/components/JobCard';
+import {NavigationContainer} from '@react-navigation/native';
+
+import Routes from './src/routes';
 
 export default function App() {
   return (
-    <View>
-      <JobCard />
-    </View>
+    <NavigationContainer>
+      <Routes />
+    </NavigationContainer>
   );
 }
