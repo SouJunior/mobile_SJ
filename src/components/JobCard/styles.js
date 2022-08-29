@@ -52,12 +52,12 @@ export const Split = styled.View`
   margin: 15px 0 12px 0;
 `;
 
-export const LocaleWrapper = styled.View`
+export const LocationWrapper = styled.View`
   flex-direction: row;
   margin-bottom: 6px;
 `;
 
-export const Locale = styled.Text`
+export const Location = styled.Text`
   font-size: 10px;
 `;
 
