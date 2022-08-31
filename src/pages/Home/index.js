@@ -6,6 +6,7 @@ import {
   Image,
   Keyboard,
   TouchableWithoutFeedback,
+  TouchableHighlight,
 } from 'react-native';
 
 import {Container} from './styles';
@@ -20,24 +21,30 @@ export default function Home() {
   const [response, setResponse] = useState([1, 2, 3, 4, 5]);
 
   return (
-    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-      <Container>
-        <Header />
-        {response ? (
-          <FlatList data={response} renderItem={() => <JobCard />} />
-        ) : (
-          <View
-            style={{
-              width: '100%',
-              height: '100%',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: '#fff',
-            }}>
-            <Image source={Bg} style={{width: 150, height: 150}} />
-          </View>
-        )}
-      </Container>
-    </TouchableWithoutFeedback>
+    <Container
+      onStartShouldSetResponder={() => true}
+      onPress={() => {
+        Keyboard.dismiss();
+      }}>
+      <Header />
+      {response ? (
+        <FlatList
+          showsVerticalScrollIndicator={false}
+          data={response}
+          renderItem={() => <JobCard />}
+        />
+      ) : (
+        <View
+          style={{
+            width: '100%',
+            height: '100%',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: '#fff',
+          }}>
+          <Image source={Bg} style={{width: 150, height: 150}} />
+        </View>
+      )}
+    </Container>
   );
 }
