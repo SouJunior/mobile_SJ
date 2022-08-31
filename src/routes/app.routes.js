@@ -32,16 +32,28 @@ export default function AppRoutes() {
             <Ionicons
               name={iconName}
               color={focused ? '#1165BA' : '#898989'}
-              size={30}
+              size={25}
             />
           );
         },
       })}>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Location" component={Location} />
-      <Tab.Screen name="Register" component={Register} />
-      <Tab.Screen name="Profile" component={Profile} />
-      <Tab.Screen name="Jobs" component={Jobs} />
+      <Tab.Screen name="Home" options={{title: 'Início'}} component={Home} />
+      <Tab.Screen
+        name="Location"
+        options={{title: 'Local'}}
+        component={Location}
+      />
+      <Tab.Screen
+        name="Register"
+        options={{title: 'Adicionar'}}
+        component={Register}
+      />
+      <Tab.Screen
+        name="Profile"
+        options={{title: 'Perfil'}}
+        component={Profile}
+      />
+      <Tab.Screen name="Jobs" options={{title: 'Vagas'}} component={Jobs} />
     </Tab.Navigator>
   );
 }
