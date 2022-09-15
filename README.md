@@ -14,7 +14,7 @@ cd mobile_SJ
 ```
     
     
-#### Na pasta do projeto, execute o seguinte comando para instalar a pasta nodemodules com as dependências do projeto:
+#### Na pasta do projeto, execute o seguinte comando para instalar a pasta node_modules com as dependências do projeto:
 ```bash
  yarn install
 ```
