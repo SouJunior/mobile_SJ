@@ -29,7 +29,7 @@ npx react-native run-android
 ```
 (Obs: O comando só funciona se tiver o emulador aberto ou dispositivo físico conectado)
 
-Caso contrário, para configurar o ambiente, siga os seguintes passos: [Configurando o ambiente](https://reactnative.dev/docs/environment-setup)
+Caso contrário, para configurar o ambiente, siga os seguintes passos: <a href="https://reactnative.dev/docs/environment-setup" target="_blank">Configurando o ambiente</a> [Configurando o ambiente](https://reactnative.dev/docs/environment-setup){:target="_blank"}
     
     
     
