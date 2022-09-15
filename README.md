@@ -1,10 +1,12 @@
 # Mobile Sou Junior
 
+<img src="./logo_soujunior.png" alt="logo"/>
+
 ## Rodando o projeto em máquina local
 
 #### Clone o Projeto
 ```bash
-  git clone https://github.com/SouJunior/mobile_SJ.git
+git clone https://github.com/SouJunior/mobile_SJ.git
 ```
     
   
@@ -16,7 +18,7 @@ cd mobile_SJ
     
 #### Na pasta do projeto, execute o seguinte comando para instalar a pasta node_modules com as dependências do projeto:
 ```bash
- yarn install
+yarn install
 ```
    
     
