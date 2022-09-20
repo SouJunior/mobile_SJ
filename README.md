@@ -2,6 +2,18 @@
 
 <img src="./logo_soujunior.png" alt="logo"/>
 
+## Etapas
+
+- [x] Navegação
+- [x] Header
+- [x] Página Home
+- [ ] Montagem de Telas
+- [ ] Conexão com banco de dados
+- [ ] Integração com Redux
+- [ ] Geração do app build
+- [ ] Publicação na loja
+
+
 ## Rodando o projeto em máquina local
 
 #### Clone o Projeto
