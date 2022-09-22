@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {View, Text} from 'react-native';
+import {Text} from 'react-native';
 
 import {
   Container,
@@ -26,10 +26,10 @@ export default function Header() {
         <Ionicons name="search" size={20} />
       </InputWrapper>
       <Action>
-        <Ionicons name="notifications-outline" size={30} />
+        <Ionicons name="notifications-outline" color="#1165BA" size={30} />
       </Action>
       <Action>
-        <Ionicons name="menu" size={30} />
+        <Ionicons name="menu" color="#1165BA" size={30} />
       </Action>
     </Container>
   );

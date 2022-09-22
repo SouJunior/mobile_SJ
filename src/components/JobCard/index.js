@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {intervalToDuration} from 'date-fns';
 
-import {View, Text} from 'react-native';
-
 import Icon from 'react-native-vector-icons/Ionicons';
 import LogoImg from '../../assets/job_standard.png';
 

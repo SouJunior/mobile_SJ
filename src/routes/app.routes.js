@@ -14,6 +14,8 @@ export default function AppRoutes() {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
+        tabBarStyle: {position: 'static'},
+        tabBarHideOnKeyboard: true,
         headerShown: false,
         tabBarIcon: ({focused}) => {
           let iconName;

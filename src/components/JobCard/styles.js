@@ -4,8 +4,9 @@ export const ContainerShadow = styled.View`
   border-radius: 5px;
   background-color: transparent;
   overflow: hidden;
-  margin: 10px;
   elevation: 4;
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;
 
 export const Container = styled.View`
