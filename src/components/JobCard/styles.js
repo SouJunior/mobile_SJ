@@ -4,7 +4,8 @@ export const ContainerShadow = styled.View`
   border-radius: 5px;
   background-color: transparent;
   overflow: hidden;
-  elevation: 4;
+  border: 1px solid #e8e8e8;
+  elevation: 1;
   margin-top: 10px;
   margin-bottom: 10px;
 `;
@@ -56,10 +57,12 @@ export const Split = styled.View`
 export const LocationWrapper = styled.View`
   flex-direction: row;
   margin-bottom: 6px;
+  align-items: center;
 `;
 
 export const Location = styled.Text`
   font-size: 10px;
+  margin-right: 5px;
 `;
 
 export const LaunchedDate = styled.Text`

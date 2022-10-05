@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {intervalToDuration} from 'date-fns';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import Octicons from 'react-native-vector-icons/Octicons';
 import LogoImg from '../../assets/job_standard.png';
 
 import {
@@ -24,6 +25,7 @@ import {
 
 export default function JobCard() {
   const [lapseTime, setLapseTime] = useState(null);
+  const [formatedDate, setFormatedDate] = useState(null);
   const [data, setData] = useState({
     id: '',
     title: 'UI/UX Designer Junior',
@@ -42,7 +44,12 @@ export default function JobCard() {
         end: new Date().getTime(),
       });
 
-      if (duration.days >= 1) {
+      if (duration.months >= 1) {
+        setLapseTime({
+          value: duration.months,
+          unity: duration.months > 1 ? ' meses' : ' mês',
+        });
+      } else if (duration.days >= 1) {
         setLapseTime({value: duration.days, unity: 'd'});
       } else if (duration.hours >= 1) {
         setLapseTime({value: duration.hours, unity: 'h'});
@@ -55,6 +62,17 @@ export default function JobCard() {
     convertToLapse();
   }, []);
 
+  useEffect(() => {
+    function convertDateFormat() {
+      console.log(new Date(data.launchTime));
+      let day = new Date(data.launchTime).getDate();
+      let month = new Date(data.launchTime).getMonth();
+      let year = new Date(data.launchTime).getFullYear();
+      setFormatedDate(day + '/' + 0 + (month + 1) + '/' + year);
+    }
+    convertDateFormat();
+  }, []);
+
   return (
     <ContainerShadow>
       <Container>
@@ -63,7 +81,7 @@ export default function JobCard() {
           <HeadDescription>
             <Title>{data.title}</Title>
             <CompanyName>{data.company}</CompanyName>
-            <WorkRelationship>Junior . CLT</WorkRelationship>
+            <WorkRelationship>{data.wRelation}</WorkRelationship>
           </HeadDescription>
         </HeadWrapper>
         <Open>
@@ -71,8 +89,9 @@ export default function JobCard() {
         </Open>
         <Split />
         <LocationWrapper>
-          <Location>São Paulo Capital, São Paulo, Brasil</Location>
-          <LaunchedDate>20/02/2022</LaunchedDate>
+          <Location>{data.location}</Location>
+          <Octicons name="dot-fill" size={5} color="#D9D9D9" />
+          <LaunchedDate>{formatedDate}</LaunchedDate>
         </LocationWrapper>
         <Description>
           Procuramos um profissional para ocupar a posição de UX Designer em um
